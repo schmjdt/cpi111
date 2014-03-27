@@ -1,0 +1,19 @@
+ctrl_field
+	GLOBAL_LEFT_PRESSED
+		/*
+		if score >= 20
+		{
+		    if place_empty(mouse_x, mouse_y)
+		    {
+			instance_create(mouse_x, mouse_y, obj_apple);
+			score -= 20;
+		    }
+		    else
+		    {
+			
+		    }
+		}
+		*/
+		
+
+

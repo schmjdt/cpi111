@@ -1,0 +1,86 @@
+Shadowrun Matrix Tower Defense
+
+
+Go on runs...	
+
+2-way tower defense...	
+	Attack
+		hacking maglock, data gathering
+	Defense
+		Defend your cyberdeck
+
+Character Stats:
+	Negotation
+	Computer
+	Combat
+
+
+Cyberdeck
+	Protect from IC, Multiple, Upgradable
+	Stats: Base Values, Hardware, Attributes
+		Base Values: MPCP (max upgrade lvl), Hardening (defense)
+		Hardware: Response (deck speed), Memory (program load, max 5), Storage (programs equipped, datafiles), Load/IO Speed (program speed)
+		Attributes: Bod (armor), Evasion (evade, accuracy), Masking (node detection, Deception success), Sensor (Analyze success)
+	
+
+Upgrade Tips: 
+	Attribute to upgrade...Masking
+	Hardware to upgrade...Response
+		Load/IO Speed not important if you don't need to change programs often if have enough space.
+		Storage and Memory important to get better/more programs.
+	When buying programs...leave room for data.
+	
+
+Decks:
+	Allegiance Alpha
+	Cyber Shack PCD-500
+	Fuchi Cyber-5
+	SEGA CTY-360
+	Fuchi Cyber-7
+	Fairlight Excalibur
+
+
+Programs (Utilities):
+	Level: L1-L8
+	Size: 
+		Small: 2,8,18,32,50,72,98,128
+		Medium: 3,12,27,48,75,108,143,192
+		Large: 4,16,36,64,100,144,196,256
+	Price: (negotiation skill to lower price?)
+		Small:60,480,1620,3840,7500,12960,20580,30720
+		Medium: 90,720,2430,5760,11250,19440,30870,46080
+		Large: 120,960,3240,7680,15000,25920,41160,61440
+ 
+
+	Attack: (S) crash IC, needed when masking fails
+	Slow: (L) reduces IC reactions (Trace IC immune)
+	Degrade: (L-Sp) lowers node security rating, defenses weakened
+	Rebound: (M-Sp) returns attacks to attacker, weakens with each attack
+	Medic: (L) repairs damage to deck
+	Shield: (L) reduces damage from attacks, degrades with each attack, (Black IC immune)
+	Smoke: (S) electronic chaos, ALL actions have added difficulty, degrades every 4 seconds
+	Mirrors: (M) decreases attack accuracy, degrades every 4 seconds
+	Sleaze: (M) bypass node completely
+	Deception: (S) creates passcodes to fool Access & Gray IC, (Barrier & Black IC immune), doesn't work in combat
+	Relocate: (S) distracts Trace IC, works in combat
+	Analyze: (M) scans node and IC for information, health & successfulness
+
+Nodes:
+	CPU (Central Processing Unit)
+	DS (Datastore) 
+	IOP (Input/Output Port)
+	SAN (System Access Node)
+	SM (Slave Module)
+	SPU (Sub-Processor Unit) - main path
+	
+
+Ice (IC - Intrusion Countermeasures):
+	Access
+	Barrier
+	Black IC
+	Blaster
+	Killer
+	Tar Paper
+	Tar Pit
+	Trace & Burn
+	Trace & Dump
