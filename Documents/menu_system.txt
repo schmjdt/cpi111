@@ -1,0 +1,114 @@
+CREATE:
+inTerminal = false;
+termMenu_X = 157;
+termMenu_Y = 120;
+terminalIndex = tile_add(tle_terminal,0,0,termMenu_X,termMenu_Y,(room_width/2)-(termMenu_X/2),(room_height/2)-(termMenu_Y/2),10000);
+tile_set_visible(terminalIndex,false);
+menuItem = -1;
+
+
+// ~~~~~~~~~~~~~~~~~~~
+tile_to_add
+
+menu_item = 0
+
+UP:
+menu_item -= 0
+if (menu_item < 0) menu_item = 0
+	
+DOWN 
+menu_item += 0
+if (menu_item >= global.num_menus) menu_item = global.num_menus - 1
+	
+
+x_start_pos = termMenu_X * menu_item
+y_start_pos = 0
+width = termMenu_x
+height = termMenu_y
+// ~~~~~~~~~~~~~~~~~~~
+
+ENTER:
+if (inTerminal)
+{
+    if (menuItem == 0) room_goto_next();
+    else inTerminal = false;
+}
+
+
+// ~~~~~~
+global.number_menus 		int
+global.is_inMenu			true/false		if in a menu
+
+global.menuVisible[0,1,...n]	true/false		if tile is visible
+global.menuIDs[0,1...n]		tile_add()		tile id
+global.menuWidths[0,1...n]	int			tile width
+global.menuLengths[0,1...n]	int			tile length
+global.menuScreen[0,1...n]	int			current tile screen
+
+                     0...n         +1/-1
+updateMenu(menuIndex, menuScreen)
+    argument[      0               1        ]
+
+m_index = argument[0]
+if (global.menuVisible[m_index])
+{
+	global.menuScreen[m_index] += argument[1];
+	if (global.menuScreen[m_index] >= global.number_menus) global.menuScreen[m_index] = global.num_menus - 1
+	if (global.menuScreen[m_index] < 0) global.menuScreen[m_index] = 0
+	x_start_pos = global.menuWidths[m_index] * global.menuScreen[m_index];
+	
+	tile_set_region(global.menuIDs[m_index], x_start_pos, 0, global.menuWidths[m_index], global.menuLengths[m_index];
+}
+
+UP:
+updateMenu(1, -1)
+
+DOWN:
+updateMenu(1, 1)
+// ~~~~~~
+
+UP:
+if (inTerminal)
+{
+    tile_set_region(terminalIndex,0,0,termMenu_X,termMenu_Y); 
+    menuItem = 0;
+}
+
+DOWN:
+if (inTerminal)
+{
+    tile_set_region(terminalIndex,termMenu_X,0,termMenu_X,termMenu_Y); 
+    menuItem = 1;
+}
+
+
+// ~~~~~~
+
+for ii from 0 to global.number_menus
+	if  global.menuVisible[ii]
+		tile_set_visible(global.menuIDs[ii], true);
+	else
+		tile_set_visible(global.menuIDs[ii], false);
+		
+
+// ~~~~~~
+
+
+DRAW:
+if (inTerminal)
+{
+    tile_set_visible(terminalIndex,true);
+    obj_player.subStill = 1;
+}
+else
+    tile_set_visible(terminalIndex,false);
+    
+draw_sprite(sprite_index,0,x,y);
+
+ESC:
+if (position_meeting(x, y+32, obj_player))
+{
+    inTerminal = true;
+    tile_set_region(terminalIndex,0,0,termMenu_X,termMenu_Y); 
+    menuItem = 0;
+}
