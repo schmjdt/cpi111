@@ -1,0 +1,35 @@
+programs:
+
+Attack: normal damage against all
+small: 2,8,18 | 60/480/1620
+damage: 3, 6, 9
+rate (shots per sec): 2, 3, 4
+range: 
+
+Slow: minor damage, slows speed for minor time
+medium: 3, 12, 27 | 90/720/2430
+damage: 2, 4, 6
+rate (shots per sec): 2, 3, 4
+slow: speed 1/2
+
+Deception: powerfull against access and gray, black immune
+large: 4, 16, 36 | 120/960/3240
+damage: 5, 10, 15
+rate (shots per sec): 1, 2, 3
+
+
+
+ice:
+
+Access: fast speed and weak armor
+speed: 5 
+health: 10
+reward = health * 3
+
+Gray: normal speed and armor
+speed: 3.5
+health: 15
+
+Black: slow speed and powerful armor
+speed: 2
+health: 20

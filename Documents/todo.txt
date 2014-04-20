@@ -1,0 +1,53 @@
+Todo:
+
+Help Menu
+	Commands
+	TesterMode (next, back, ect.)
+	Discuss map, missions
+
+Save/Load game
+	If in mission - note will exit mission, goto map
+
+
+mr_johnson
+	Sprite, Object
+	Add to rm_map (or create new room)
+	Mission system, variables
+
+
+Towers
+	Add at least 2 more towers
+
+Enemies
+	Add at least 2 more enemies
+	An enemie that is only affected by 1 tower
+	Display 'next' enemie
+
+Balance Gameplay
+
+Store Intro
+	Bubble above Joshua's head stating he should go talk with Mr. Johnson and get a mission
+
+cyberdeck
+	Sprite, Object
+	Menu
+	Stats
+	*start with a basic cyberdeck w/ no upgrade
+
+Endless Mode
+	Mode where enemies just keep comming
+
+
+
+
+
+Future:
+Matrix Missions:
+	First attack, gather data...If sound alarm, then defend
+
+Map:
+	More to do in the "real-world"
+
+Tabletop Testing Grounds:
+	Make 5E (possibly earlier also) ruleset and allow to test them
+		Simulate rolling, combat, edge, weapons, spells

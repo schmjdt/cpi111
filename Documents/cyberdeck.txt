@@ -1,0 +1,27 @@
+Cyberdeck:
+	Protect from IC, Multiple, Upgradable
+	Stats: Base Values, Hardware, Attributes
+		Base Values: MPCP (max upgrade lvl), Hardening (defense)
+		Hardware: Response (deck speed), Memory (program load, max 5), Storage (programs equipped, datafiles), Load/IO Speed (program speed)
+		Attributes: Bod (armor), Evasion (evade, accuracy), Masking (node detection, Deception success), Sensor (Analyze success)
+	
+
+* Most of this is a balancing act
+* Affects the persona
+
+base_value:
+	mpcp		: 5	: total number of all upgrades allowed (constant)
+	hardening	: 5	: defense of persona (percent taken from ICE damage)
+
+hardware_value:
+	response	: -	: not used
+	memory		: 5	: size of programs allowed (multiplier from base value)
+	storage		: 10	: # of programs allowed (constant)
+	io_speed	: 3	: # steps to un/install program (base 90 - io_speed * 10)
+
+* Can ignore these for now...used for "attacking"
+attribute_value:
+	bod		
+	evasion
+	masking
+	sensor
