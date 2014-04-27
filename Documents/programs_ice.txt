@@ -12,10 +12,30 @@ damage: 2, 4, 6
 rate (shots per sec): 2, 3, 4
 slow: speed 1/2
 
-Deception: powerfull against access and gray, black immune
+Deception: powerfull against access and blaster, black immune
 large: 4, 16, 36 | 120/960/3240
 damage: 5, 10, 15
 rate (shots per sec): 1, 2, 3
+
+
+
+active      = 1;
+firing      = 0;
+selected    = 0;
+coll_path   = 0
+target      = noone;
+
+
+name        = 'Attack';
+range       = 100;
+damage      = 10;
+memory      = 20;
+level       = 0;
+rate        = 2;
+hp          = 5;
+maxhp       = hp;
+
+
 
 
 
@@ -26,10 +46,23 @@ speed: 5
 health: 10
 reward = health * 3
 
-Gray: normal speed and armor
+Blaster: normal speed and armor
 speed: 3.5
 health: 15
 
-Black: slow speed and powerful armor
+Black IC: slow speed and powerful armor
 speed: 2
 health: 20
+
+
+
+Ice (IC - Intrusion Countermeasures):
+	Access
+	Barrier
+	Black IC
+	Blaster
+	Killer
+	Tar Paper
+	Tar Pit
+	Trace & Burn
+	Trace & Dump
